@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain and File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            display: none;
+        }
+
+        #copy-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #copy-button:hover {
+            background-color: #006f8e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Domain and File Upload</h2>
+        
+        <!-- Domain input -->
+        <label for="domain">Domain Name Or Site Name(If The Domain Is Too Long):</label>
+        <input type="text" id="domain" placeholder="Enter Domain Name" required><br>
+
+        <!-- User and ID input (simulate access.txt data) -->
+        <label for="user">User:[This will Automatically Detect If You have the rights to make a login page]</label>
+        <input type="text" id="user" placeholder="Enter User Name" required><br>
+
+        <label for="id">ID:[If You Don't Have rights, then we will block the login page. Click Here To Get Rights]</label>
+        <input type="text" id="id" placeholder="Enter ID" required><br>
+
+        <!-- Submit button -->
+        <button id="submit-button">Generate Code</button>
+
+        <!-- Error message display -->
+        <div id="error-message"></div>
+
+        <!-- Result display -->
+        <div id="result"></div>
+
+        <!-- Copy Button -->
+        <button id="copy-button" style="display: none;">Copy Code</button>
+    </div>
+
+    <!-- Linking the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
